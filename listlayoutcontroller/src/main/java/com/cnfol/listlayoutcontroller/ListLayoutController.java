@@ -145,8 +145,8 @@ public class ListLayoutController implements View.OnClickListener {
         Empty,//空页面,无数据
         Error,//错误数据,解析出错
         NetworkError,//网络错误
-        LessThanPageSize,//该页面条目少于10,用于标记不显示loadmore
-        Default//正常值 未出错
+//        LessThanPageSize,//该页面条目少于10,用于标记不显示loadmore
+//        Default//正常值 未出错
     }
 
 

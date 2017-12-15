@@ -1,9 +1,13 @@
-package com.cnfol.listlayoutcontroller;
+package com.cnfol.android;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.cnfol.listlayoutcontroller.AbstractXListView;
+import com.cnfol.listlayoutcontroller.ListLayoutController;
+import com.cnfol.listlayoutcontroller.XListViewFooter;
 
 public class MainActivity extends AppCompatActivity {
     ListLayoutController listLayoutController;
@@ -57,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void LessThanPageSize(View view) {
-        listLayoutController.manageListViewAndShowErrorPage(ListLayoutController.PageStatus.LessThanPageSize, listView);
+        //listLayoutController.manageListViewAndShowErrorPage(ListLayoutController.PageStatus.LessThanPageSize, listView);
     }
 
     public void Default(View view) {
-        listLayoutController.manageListViewAndShowErrorPage(ListLayoutController.PageStatus.Default, listView);
+        //listLayoutController.manageListViewAndShowErrorPage(ListLayoutController.PageStatus.Default, listView);
     }
 }

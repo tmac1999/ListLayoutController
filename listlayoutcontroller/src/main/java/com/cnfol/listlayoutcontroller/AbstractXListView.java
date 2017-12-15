@@ -4,7 +4,7 @@ package com.cnfol.listlayoutcontroller;
  * Created by mrz on 17/12/13.
  */
 
-interface  AbstractXListView {
+public interface  AbstractXListView {
 
 
     public abstract void setPullLoadEnable(boolean b);
