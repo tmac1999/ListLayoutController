@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ListLayoutController</string>
+    <string name="network_not_working">~主人，网络出现问题啦~</string>
+    <string name="net_error">网络异常，请稍后再试</string>
+    <string name="data_error">数据异常，请稍后再试</string>
+    <string name="no_content">~暂无内容~</string>
+</resources>
