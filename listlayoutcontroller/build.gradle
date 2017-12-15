@@ -1,13 +1,22 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.novoda.bintray-release'//添加
+//添加
+publish {
+    userOrg = 'tmac1999'//bintray.com用户名
+    groupId = 'com.cnfol.android'//jcenter上的路径
+    artifactId = 'listlayoutcontroller'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'A controller that controls list layout UI'//描述，不重要
+    website = 'https://github.com/tmac1999/ListLayoutController'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
 android {
-    compileSdkVersion 26
-
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
 
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
 
@@ -21,8 +30,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
 
 }
+
 
 dependencies {
     //implementation fileTree(dir: 'libs', include: ['*.jar'])

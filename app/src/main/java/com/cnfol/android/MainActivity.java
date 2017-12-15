@@ -1,7 +1,7 @@
 package com.cnfol.android;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -10,7 +10,7 @@ import com.cnfol.listlayoutcontroller.AbstractXListView;
 import com.cnfol.listlayoutcontroller.ListLayoutController;
 import com.cnfol.listlayoutcontroller.XListViewFooter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     ListLayoutController listLayoutController;
     private int pageSize = 10;
     private AbstractXListView listView;
