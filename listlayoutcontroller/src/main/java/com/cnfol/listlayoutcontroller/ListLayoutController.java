@@ -61,7 +61,8 @@ public class ListLayoutController implements View.OnClickListener {
      */
     //处理请求并解析正确后应该显示的样式并保存状态 doc
     public void manageListViewAndShowSuccessfulPage(int pageNum, int listSize, AbstractXListView listView) {
-        listView.getFooterView().setFootTextView("查看更多");//已加载完全部后，防止又重新刷新文字没有改变过来。
+        if (listView.getFooterView() != null)
+            listView.getFooterView().setFootTextView("查看更多");//已加载完全部后，防止又重新刷新文字没有改变过来。
         if (pageNum == 1) {
             if (listSize == 0) {
 

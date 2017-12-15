@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.cnfol.listlayoutcontroller.AbstractXListView;
 import com.cnfol.listlayoutcontroller.ListLayoutController;
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     ListLayoutController listLayoutController;
     private int pageSize = 10;
     private AbstractXListView listView;
+    private int pageNum = 1;
+    private int listSize = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
                 return null;
             }
         };
+        listLayoutController.setOnReloadButtonClickListener(new ListLayoutController.OnReloadButtonClickListener() {
+            @Override
+            public void onReloadButtonClick() {
+                Toast.makeText(MainActivity.this,"onReloadButtonClick",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void Empty(View view) {
@@ -62,9 +71,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void LessThanPageSize(View view) {
         //listLayoutController.manageListViewAndShowErrorPage(ListLayoutController.PageStatus.LessThanPageSize, listView);
+        listLayoutController.manageListViewAndShowSuccessfulPage(pageNum,listSize,listView);
+        Toast.makeText(this,"LessThanPageSize",Toast.LENGTH_SHORT).show();
     }
 
     public void Default(View view) {
-        //listLayoutController.manageListViewAndShowErrorPage(ListLayoutController.PageStatus.Default, listView);
+        listLayoutController.manageListViewAndShowSuccessfulPage(pageNum,pageSize,listView);
+        Toast.makeText(this,"Default",Toast.LENGTH_SHORT).show();
     }
 }
