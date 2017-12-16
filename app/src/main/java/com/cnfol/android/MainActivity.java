@@ -70,7 +70,6 @@ public class MainActivity extends Activity {
     }
 
     public void LessThanPageSize(View view) {
-        //listLayoutController.manageListViewAndShowErrorPage(ListLayoutController.PageStatus.LessThanPageSize, listView);
         listLayoutController.manageListViewAndShowSuccessfulPage(pageNum,listSize,listView);
         Toast.makeText(this,"LessThanPageSize",Toast.LENGTH_SHORT).show();
     }

@@ -1,0 +1,1 @@
+compile 'com.cnfol.android:listlayoutcontroller:1.0.0'
